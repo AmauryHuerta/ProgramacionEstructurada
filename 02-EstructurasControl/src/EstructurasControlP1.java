@@ -26,6 +26,8 @@ public class EstructurasControlP1 {
                 fruteria();
                 break;
             case "C":
+                //Lamada al otro metodo
+                laboratorio();
                 break;
             case "D":
                 JOptionPane.showMessageDialog(null, "El programa a fianlizado");
@@ -89,6 +91,92 @@ public class EstructurasControlP1 {
             }
 
         }
+    }
+
+    public static void laboratorio() {
+        //Declaracion de variables
+        int edad=0;
+        String mesAño="";
+        String sexo="";
+        double hemoglobina=0.0;
+
+        //Engtrada de valores
+        mesAño = JOptionPane.showInputDialog("Ingrese si el paciente tiene meses o años: (Meses/Años)");
+
+        if (mesAño.equalsIgnoreCase("meses")) {
+            edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del paciente: "));
+
+            if (edad >= 0 && edad <= 1) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 13) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 13) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 1 && edad <= 6) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 10) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 10) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 6 && edad <=12) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 11) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 11) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 12) {
+                JOptionPane.showMessageDialog(null, "Elige la opcion años");
+            }
+        } else if (mesAño.equalsIgnoreCase("años")) {
+            edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del paciente: "));
+
+            if (edad > 1 && edad <= 5) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 11.5) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 11.5) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 5 && edad <= 10) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 12.6) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 12.6) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 10 && edad <= 15) {
+                hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                if (hemoglobina >= 13) {
+                    JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                } else if (hemoglobina < 13) {
+                    JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                }
+            } else if (edad > 15) {
+               sexo = JOptionPane.showInputDialog("Ingrese el sexo del paciente: (Hombre/Mujer)");
+
+               if (sexo.equalsIgnoreCase("Mujer")) {
+                   hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                   if (hemoglobina >= 12) {
+                       JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                   } else if (hemoglobina < 12) {
+                       JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                   }
+               } else if (sexo.equalsIgnoreCase("Hombre")) {
+                   hemoglobina = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el nivel de hemoglobina: "));
+                   if (hemoglobina >= 14) {
+                       JOptionPane.showMessageDialog(null, "El paciente da negativo a anemia");
+                   } else if (hemoglobina < 14) {
+                       JOptionPane.showMessageDialog(null, "El paciente da positivo a anemia");
+                   }
+               }
+            } else if (edad == 1) {
+                JOptionPane.showMessageDialog(null, "Elige la opcion meses");
+            }
+        }
+
     }
 
 }
