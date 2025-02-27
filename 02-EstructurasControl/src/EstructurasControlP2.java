@@ -91,7 +91,7 @@ public class EstructurasControlP2 {
         saldo -= mobiliario;
         JOptionPane.showMessageDialog(null, "Se han destinado $2000 a mobiliario del saldo actual");
 
-        saldo /= 2;
+        saldo /= 2.0;
 
         JOptionPane.showMessageDialog(null, "Y de saldo actual que queda la mitad (" + saldo + ") se ha destinado a la compra de insumos" +
                                                                     "\ny la otra mitad (" + saldo + ") se ha destinado a incentivos para el personal.");
